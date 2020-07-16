@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    {{ count }}
+    {{ countPlusLocalState }}
+    <div></div>
+    Completed Todos : {{ doneTodosCount }}
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
 
 export default {
   name: 'App',
@@ -17,9 +18,14 @@ export default {
       localCount: 4,
     }
   },
-  computed: mapState([
-    'count'
-  ]),
+  computed: {
+    doneTodosCount() {
+      return this.$store.getters.doneTodosCount;
+    },
+    countPlusLocalState() {       
+      return this.$store.state.count + this.localCount;
+    },
+  },
 }
 </script>
 
