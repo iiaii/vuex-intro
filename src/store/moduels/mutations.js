@@ -4,5 +4,8 @@ export const mutations = {
     },
     incrementBy (state, payload) {
         state.count += payload.amount;
+    },
+    decrement (state) {
+        state.count--;
     }
 }
