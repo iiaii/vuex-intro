@@ -2,10 +2,10 @@ export const getters = {
     doneTodos: state => {
         return state.todos.filter(todo => todo.done);
     },
-        doneTodosCount: (state, getters) => {
+    doneTodosCount: (state, getters) => {
         return getters.doneTodos.length;
     },
-        getTodoById: (state) => (id) => {
+    getTodoById: (state) => (id) => {
         return state.todos.find(todo => todo.id === id);
     }
 };

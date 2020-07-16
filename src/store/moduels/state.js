@@ -3,5 +3,8 @@ export const state = {
     todos: [
         { id: 1, text: '...', done: true },
         { id: 2, text: '...', done: false },
+        { id: 3, text: '...', done: true },
+        { id: 4, text: '...', done: false },
+        { id: 5, text: '...', done: false },
     ],
 };

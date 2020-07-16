@@ -1,30 +1,20 @@
+import { mapState } from 'vuex';
 <template>
   <div id="app">
-    {{ countPlusLocalState }}
-    <div></div>
-    Completed Todos : {{ doneTodosCount }}
+    <Count></Count>
+    <Todo></Todo>
   </div>
 </template>
 
 <script>
+import Count from './components/Count';
+import Todo from './components/Todo';
 
 export default {
   name: 'App',
   components: {
-
-  },
-  data() {
-    return {
-      localCount: 4,
-    }
-  },
-  computed: {
-    doneTodosCount() {
-      return this.$store.getters.doneTodosCount;
-    },
-    countPlusLocalState() {       
-      return this.$store.state.count + this.localCount;
-    },
+    Count,
+    Todo,
   },
 }
 </script>
@@ -39,12 +29,3 @@ export default {
   margin-top: 60px;
 }
 </style>
-
-
-//  computed: mapState({
-//     count: state => state.count,
-//     countAlias: 'count',
-//     countPlusLocalState(state) {       // this 사용하기 위해 이런 구조
-//       return state.count + this.localCount;
-//     },
-//  })
