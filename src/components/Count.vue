@@ -23,8 +23,12 @@ export default {
         }
     },
     computed: {
+        ...mapState({
+            a: state => state.moduleA.count,
+            b: state => state.moduleB.subModule.count,
+        }),
         ...mapState([
-            'count',
+            'count'
         ]),
         countPlusLocalState() {       
             return this.count + this.localCount;
@@ -35,6 +39,9 @@ export default {
             'increment',
             'incrementBy',
             'decrement'
+        ]),
+        ...mapActions('some/nested/module', [
+            'foo'   // this['some/nested/module/foo']()
         ]),
         ...mapActions([
             'incrementAsync'
