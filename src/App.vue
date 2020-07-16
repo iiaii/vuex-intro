@@ -1,6 +1,11 @@
 import { mapState } from 'vuex';
 <template>
   <div id="app">
+    {{ message }}<br>
+    <input v-model="message" />
+    <br>
+    {{ message }}<br>
+    <input :value="message" @input="updateMessage" />
     <Count></Count>
     <Todo></Todo>
   </div>
@@ -16,6 +21,21 @@ export default {
     Count,
     Todo,
   },
+  computed: {
+    message: {
+      get () {
+        return this.$store.state.message;
+      },
+      set (value) {
+        this.$store.commit('updateMessage', value);
+      }
+    }
+  },
+  methods: {
+    updateMessage (e) {
+      this.$store.commit('updateMessage', e.target.value);
+    }
+  }
 }
 </script>
 

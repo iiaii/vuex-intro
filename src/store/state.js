@@ -7,4 +7,5 @@ export const state = {
         { id: 4, text: '...', done: false },
         { id: 5, text: '...', done: false },
     ],
+    message: 'Hello Vuex',
 };

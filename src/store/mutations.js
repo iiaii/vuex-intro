@@ -7,5 +7,8 @@ export const mutations = {
     },
     decrement (state) {
         state.count--;
+    },
+    updateMessage (state, message) {
+        state.message = message
     }
 };
