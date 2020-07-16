@@ -2,11 +2,11 @@
   <div>
       <h1>Todos</h1>
       <h5>All items : {{ todos.length }}</h5>
-      <li v-for="todo in todos" v-bind:key="todo.id">
+      <li v-for="todo in todos" v-bind:key="'Todo-'+todo.id">
         <span>{{ todo }}</span>
       </li>
       <h5>Done items : {{ doneTodosCount }}</h5>
-      <li v-for="doneTodo in doneTodos" v-bind:key="doneTodo.id">
+      <li v-for="doneTodo in doneTodos" v-bind:key="'doneTodo-'+doneTodo.id">
         <span>{{ doneTodo }}</span>
       </li>
       <div>get 2 from todos : {{ getTodoById(1) }}</div>

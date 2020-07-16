@@ -8,4 +8,4 @@ export const mutations = {
     decrement (state) {
         state.count--;
     }
-}
+};

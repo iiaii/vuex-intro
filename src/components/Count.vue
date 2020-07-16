@@ -5,6 +5,8 @@
             <button @click='increment'>+</button> 
              : 
             <button @click='decrement'>-</button>
+             : 
+            <button @click='incrementAsync'>+(after 1 sec)</button>
         </div>
         <div>localCount = {{ localCount }}</div>
         <div>count+localCount = {{ countPlusLocalState }}</div>
@@ -12,7 +14,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations, mapActions } from 'vuex';
 
 export default {
     data() {
@@ -34,6 +36,15 @@ export default {
             'incrementBy',
             'decrement'
         ]),
+        ...mapActions([
+            'incrementAsync'
+        ]),
+        testAction() {
+            this.$store.dispatch('actionA')
+            .then(() => {
+                // 동기 처리 가능
+            });
+        }
     }
 }
 </script>
