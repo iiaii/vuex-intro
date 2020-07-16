@@ -4,8 +4,8 @@ import { state } from './state';
 import { getters } from './getters';
 import { mutations } from './mutations';
 import { actions } from './actions';
-import { moduleA } from './moduels/moduleA';
-import { moduleB } from './moduels/moduleB';
+import { moduleA } from './modules/moduleA';
+import { moduleB } from './modules/moduleB';
 
 
 Vue.use(Vuex);
