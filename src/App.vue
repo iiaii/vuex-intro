@@ -5,17 +5,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 
 export default {
   name: 'App',
   components: {
 
   },
-  computed: {
-    count() {
-      return this.$store.state.count;
+  data() {
+    return {
+      localCount: 4,
     }
   },
+  computed: mapState([
+    'count'
+  ]),
 }
 </script>
 
@@ -29,3 +33,12 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
+//  computed: mapState({
+//     count: state => state.count,
+//     countAlias: 'count',
+//     countPlusLocalState(state) {       // this 사용하기 위해 이런 구조
+//       return state.count + this.localCount;
+//     },
+//  })

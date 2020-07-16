@@ -8,7 +8,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state:{
-    count: 12,
+    count: 3,
   },
 });
 
