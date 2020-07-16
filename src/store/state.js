@@ -8,4 +8,9 @@ export const state = {
         { id: 5, text: '...', done: false },
     ],
     message: 'Hello Vuex',
+    products: [
+        { id: 1, title: 'Apple', category: 'fruit' },
+        { id: 2, title: 'Orange', category: 'fruit' },
+        { id: 3, title: 'Carrot', category: 'Vegetable' }
+    ]
 };

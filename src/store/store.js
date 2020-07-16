@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Vuex, { createLogger } from 'vuex';
+import Vuex /*,{ createLogger }*/ from 'vuex';
 import { state } from './state';
 import { getters } from './getters';
 import { mutations } from './mutations';
