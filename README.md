@@ -1,6 +1,6 @@
 # vuex-intro
 
-[Learn Vuex](https://scrimba.com/g/gvuex)
+Scrimba [Learn Vuex](https://scrimba.com/g/gvuex) 
 
 
 ## Project setup
